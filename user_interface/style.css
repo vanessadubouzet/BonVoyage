@@ -3,10 +3,25 @@
     src: url(./resources/fonts/Fraunces_72pt-BoldItalic.ttf);
 }
 
+@font-face {
+    font-family: "Poppins";
+    src: url(./resources/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(./resources/fonts/Poppins-Bold.ttf);
+}
+
 * {
     padding: 0;
     margin: 0;
-    font-family: "Biz";
+    font-size: 40px;
+    font-family: Poppins;
+}
+
+.hidden {
+    display: none;
 }
 
 .container {
@@ -17,12 +32,115 @@
 .logo_side {
     display: flex;
     background-color: #EEFAFA;
-    width: 60%;
+    width: 55%;
     justify-content: center;
     align-items: center;
 }
 
 .logo_side img {
-    height: 600px;
-    width: 600px;
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 600px;
+    max-width: 600px;
+}
+
+.form_side {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form_side h1 {
+    font-family: Fraunces;
+    color: #FFA7A7;
+    font-size: 2rem;
+    text-shadow: 5px 2px 4px #FFF5A6;
+    
+}
+
+.form_side p {
+    font-size: .5rem;
+    margin-bottom: 10px;
+}
+
+.form_sign_in {
+    width: 100%;
+}
+
+.form_side input[type=text] {
+    width: 100%;
+    font-size: .4rem;
+    background-color: #D9D9D9;
+    width: 50%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form_side input[type=submit] {
+    width: 50%;
+    margin-top: 20px;
+    background-color:#FFA7A7;
+    text-transform: uppercase;
+    font-family: Poppins-Bold;
+    font-size: .4rem;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 30px;
+    padding: 13px;
+    cursor: pointer;
+}
+
+.form_side span {
+    margin-top: 10px;
+    font-size: .4rem;
+    text-decoration: underline;
+}
+
+.form_side hr {
+    margin-top: 50px;
+    color: #D9D9D9;
+    width: 80%;
+}
+
+.span_sign_in {
+    cursor: pointer;
+}
+
+.btn_create_acc {
+    width: 50%;
+    background-color:#9E91B8;
+    text-transform: uppercase;
+    font-size: .5rem;
+    font-family: Poppins-Bold;
+    color: #FFFFFF;
+    border-radius: 30px;
+    border: none;
+    padding: 13px;
+    margin: 30px 0px 0px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .logo_side {
+        width: 100%;
+    }
+    .form_side {
+        width: 100%;
+       padding-bottom: 10%;
+    }
+
+    .logo_side img {
+        max-height: 200px;
+        max-width: 200px;
+    }
 }
